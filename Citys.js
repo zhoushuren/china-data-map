@@ -1,7 +1,6 @@
 /**
  * Created by zhoujun on 2017/4/18.
  */
-
 import createG2 from 'g2-react';
 import {Stat} from 'g2';
 import React from 'react'
@@ -64,8 +63,6 @@ class Province extends React.Component {
 
 	createPoint(chart){
 		const city = this.props.city;
-		//console.log(city);
-		//console.log(world);
 		let arr = [
 			{
 				num: 200,
@@ -94,7 +91,6 @@ class Province extends React.Component {
 			shadowColor: '#fe3720'
 		});
 	}
-
 	createMap(){
 		const Map = createG2(chart => {
 			this.createdBg(chart);
@@ -123,5 +119,4 @@ function mapStateToProps(state) {
 	const {city} = state.data;
 	return {city};
 }
-
 export default connect(mapStateToProps)(Province);
